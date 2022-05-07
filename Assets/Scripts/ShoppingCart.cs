@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShoppingCart : MonoBehaviour
 {
     public GameObject selectedObject;
+    public static bool isScanned = false;
     Vector3 offset;
 
     void Start()
@@ -15,23 +16,20 @@ public class ShoppingCart : MonoBehaviour
     void Update()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isScanned)
         {
             // on mouse click, set the selected object and get offset
             Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
-            if (targetObject)
+            if (targetObject && targetObject.transform.parent.name == "Items")
             {
                 selectedObject = targetObject.transform.gameObject;
                 offset = selectedObject.transform.position - mousePosition;
             }
         }
-        if (selectedObject)
+        if (selectedObject && !isScanned)
         {
             // set object's position based on mouse position
             selectedObject.transform.position = mousePosition + offset;
-
-            // while selecting object
-            Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
         }
         if (Input.GetMouseButtonUp(0) && selectedObject)
         {
