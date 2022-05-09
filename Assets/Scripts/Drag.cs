@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Drag : MonoBehaviour
 { 
-    public Vector3 gameObjectSreenPoint;
-    public Vector3 mousePreviousLocation;
-    public Vector3 mouseCurLocation;
+    // public Vector3 gameObjectSreenPoint;
+    // public Vector3 mousePreviousLocation;
+    // public Vector3 mouseCurLocation;
     public Rigidbody2D rb;
-    bool isMoving = false;
+    // bool isMoving = false;
 
     private void Start() {
         rb = transform.parent.GetComponent<Rigidbody2D>();
