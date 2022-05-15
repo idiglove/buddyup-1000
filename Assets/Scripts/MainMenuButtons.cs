@@ -10,13 +10,23 @@ public class MainMenuButtons : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1; //unpause
-        transform.Find("Roller Coaster").GetComponent<Button>().onClick.AddListener(() => SceneManager.LoadScene("Roller Coaster"));
-        transform.Find("Shopping Game").GetComponent<Button>().onClick.AddListener(() => SceneManager.LoadScene("Shopping"));
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (Input.GetMouseButtonDown(0))
+        {
+            Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
+            if (targetObject && targetObject.name == "Roller Coaster")
+            {
+                SceneManager.LoadScene("Roller Coaster");
+            }
+
+            if (targetObject && targetObject.name == "Shopping Game") {
+                SceneManager.LoadScene("Shopping");
+            }
+        }
     }
 }
