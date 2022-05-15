@@ -11,6 +11,7 @@ public class ShoppingCart : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(WaitUntilLevelFinished());
     }
 
     // Update is called once per frame
@@ -47,6 +48,19 @@ public class ShoppingCart : MonoBehaviour
                 ShoppingItems.resetLevel();
                 SceneManager.LoadScene("Shopping");
             }
+
+            if (targetObject && targetObject.name == "Back") {
+                ShoppingItems.resetLevel();
+                SceneManager.LoadScene("MainMenu");
+            }
+        }
+    }
+
+    IEnumerator WaitUntilLevelFinished()
+    {
+        while (!ShoppingItems.levelFinished) {
+            yield return new WaitForSeconds(1f);
+            ShoppingItems.timeElapsed++;
         }
     }
 }

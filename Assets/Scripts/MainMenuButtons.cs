@@ -9,6 +9,7 @@ public class MainMenuButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1; //unpause
         transform.Find("Roller Coaster").GetComponent<Button>().onClick.AddListener(() => SceneManager.LoadScene("Roller Coaster"));
         transform.Find("Shopping Game").GetComponent<Button>().onClick.AddListener(() => SceneManager.LoadScene("Shopping"));
     }

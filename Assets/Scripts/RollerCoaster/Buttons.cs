@@ -25,6 +25,7 @@ public class Buttons : MonoBehaviour
             
             if (targetObject && targetObject.name == "Back")
             {
+                RollerCoasterManager.reset();
                 SceneManager.LoadScene("MainMenu");
             }
 

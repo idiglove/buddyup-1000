@@ -13,15 +13,6 @@ public class ShoppingItem : MonoBehaviour
     void Start()
     {
         totalPrice = transform.parent.parent.Find("Total Price").GetComponent<TextMeshPro>();
-        StartCoroutine(WaitUntilLevelFinished());
-    }
-
-    IEnumerator WaitUntilLevelFinished()
-    {
-        while (!ShoppingItems.levelFinished) {
-            yield return new WaitForSeconds(1f);
-            ShoppingItems.timeElapsed++;
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
