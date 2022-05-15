@@ -46,7 +46,7 @@ public class TriggerObject : MonoBehaviour
   void triggerEndGame(string gameObject)
   {
     if (gameObject == "You Win") {
-      GameObject.Find("Main").transform.Find(gameObject).GetComponent<TextMeshPro>().text = "You win in " + RollerCoasterManager.timeElapsed + "s";
+      GameObject.Find("Main").transform.Find(gameObject).GetComponent<TextMeshPro>().text = "You won in " + RollerCoasterManager.timeElapsed + "s";
     }
     GameObject.Find("Main").transform.Find(gameObject).gameObject.SetActive(true);
     Time.timeScale = 0;

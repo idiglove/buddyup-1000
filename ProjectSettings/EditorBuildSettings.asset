@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 55a12f8d962a3d04aa9e19ee2b1f1913
+  - enabled: 1
     path: Assets/Scenes/Shopping.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Roller Coaster.unity
+    guid: 3ae2734654b0f964eabdac964a9961cb
+  - enabled: 1
+    path: Assets/Scenes/Lawn Mower Start.unity
+    guid: 1f08da4a3e0e12844a4d886a733739be
   m_configObjects: {}

@@ -17,4 +17,14 @@ public static class ShoppingItems
     {"bread", 150},
     {"duck", 300},
   };
+
+  public static int price = 0;
+  public static int timeElapsed = 0;
+  public static bool levelFinished = false;
+
+  public static void resetLevel() {
+    price = 0;
+    timeElapsed = 0;
+    levelFinished = false;
+  }
 }

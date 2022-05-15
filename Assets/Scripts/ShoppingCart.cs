@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShoppingCart : MonoBehaviour
 {
@@ -35,6 +36,17 @@ public class ShoppingCart : MonoBehaviour
         {
             // on release, unselect the object
             selectedObject = null;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
+            if (targetObject && targetObject.name == "Final Score")
+            {
+                Time.timeScale = 1;
+                ShoppingItems.resetLevel();
+                SceneManager.LoadScene("Shopping");
+            }
         }
     }
 }
