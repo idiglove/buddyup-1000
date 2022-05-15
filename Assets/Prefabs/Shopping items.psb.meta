@@ -1,0 +1,472 @@
+fileFormatVersion: 2
+guid: 0486bc49e7bb06e42ada0645f1d7aed9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: plunger
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1386
+      width: 196
+      height: 600
+    spriteID: b724aded083fa6045ac59a4c0586feb7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -79, y: 1336}
+  - name: mug
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1345
+      y: 1092
+      width: 166
+      height: 176
+    spriteID: 688c3c7ad9e74b44fba0620803b1ca5b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1044, y: 839}
+  - name: banana
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1051
+      y: 1092
+      width: 286
+      height: 136
+    spriteID: 88cd278b7c1c55045a6c3965e837584f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 339, y: 774}
+  - name: crowbar
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1092
+      width: 516
+      height: 286
+    spriteID: 62e86b80ebee0704b9c0801e02360331
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -563, y: 1050}
+  - name: clock
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 1386
+      width: 288
+      height: 373
+    spriteID: 28f4fd7e95433d642b2dff83a9ee15bc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -850, y: 1099}
+  - name: toothbrush
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 1931
+      width: 259
+      height: 49
+    spriteID: 262cb36437e49934cbd9338061a7ea61
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -884, y: 1760}
+  - name: toilet paper
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 208
+      y: 1767
+      width: 216
+      height: 156
+    spriteID: 9592f4102c9852c4c8732368d96b561e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1483, y: 1437}
+  - name: milk
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 504
+      y: 1386
+      width: 117
+      height: 311
+    spriteID: 3afb49b9b383bd048a38357550e77247
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1054, y: 1053}
+  - name: bread
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 528
+      y: 1092
+      width: 304
+      height: 247
+    spriteID: 193a35341077014488add79b0445dff4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -868, y: 1006}
+  - name: duck
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 840
+      y: 1092
+      width: 203
+      height: 252
+    spriteID: e371095590b10d0478bda4848cd3cbb4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -811, y: 1009}
+  - name: Layer 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1920
+      height: 1080
+    spriteID: 27782c3b5663e5f408f27602fbeb4bd7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: plunger
+    spriteName: plunger
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b724aded083fa6045ac59a4c0586feb7
+    layerID: 12
+    mosaicPosition: {x: 4, y: 1386}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: mug
+    spriteName: mug
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 688c3c7ad9e74b44fba0620803b1ca5b
+    layerID: 11
+    mosaicPosition: {x: 1345, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: banana
+    spriteName: banana
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 88cd278b7c1c55045a6c3965e837584f
+    layerID: 10
+    mosaicPosition: {x: 1051, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: crowbar
+    spriteName: crowbar
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 62e86b80ebee0704b9c0801e02360331
+    layerID: 9
+    mosaicPosition: {x: 4, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: clock
+    spriteName: clock
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 28f4fd7e95433d642b2dff83a9ee15bc
+    layerID: 8
+    mosaicPosition: {x: 208, y: 1386}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: toothbrush
+    spriteName: toothbrush
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 262cb36437e49934cbd9338061a7ea61
+    layerID: 7
+    mosaicPosition: {x: 208, y: 1931}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: toilet paper
+    spriteName: toilet paper
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9592f4102c9852c4c8732368d96b561e
+    layerID: 6
+    mosaicPosition: {x: 208, y: 1767}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: milk
+    spriteName: milk
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3afb49b9b383bd048a38357550e77247
+    layerID: 5
+    mosaicPosition: {x: 504, y: 1386}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: bread
+    spriteName: bread
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 193a35341077014488add79b0445dff4
+    layerID: 4
+    mosaicPosition: {x: 528, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: duck
+    spriteName: duck
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e371095590b10d0478bda4848cd3cbb4
+    layerID: 3
+    mosaicPosition: {x: 840, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 1
+    spriteName: Layer 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 27782c3b5663e5f408f27602fbeb4bd7
+    layerID: 2
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

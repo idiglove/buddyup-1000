@@ -20,7 +20,7 @@ public class ShoppingCart : MonoBehaviour
         {
             // on mouse click, set the selected object and get offset
             Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
-            if (targetObject && targetObject.transform.parent.name == "Items")
+            if (targetObject && targetObject.transform.parent.name == "Shopping Items")
             {
                 selectedObject = targetObject.transform.gameObject;
                 offset = selectedObject.transform.position - mousePosition;

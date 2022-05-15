@@ -9,25 +9,37 @@ public class ShoppingItem : MonoBehaviour
     [SerializeField] private float movementSpeed = 20f;
     bool isMoving = false;
     static int price = 0;
+    public int timeElapsed = 0;
+    public bool levelFinished = false;
 
     // Start is called before the first frame update
     void Start()
     {
         totalPrice = transform.parent.parent.Find("Total Price").GetComponent<TextMeshPro>();
+        StartCoroutine(WaitUntilLevelFinished());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator WaitUntilLevelFinished()
     {
-        
+        while (!levelFinished) {
+            yield return new WaitForSeconds(1f);
+            timeElapsed++;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        Debug.Log("collider " + other.name);
         if (other.gameObject.name == "Scanner Collider") {
             ShoppingCart.isScanned = true;
-            price += int.Parse(transform.name);
-            Transform bagPos = transform.parent.parent.Find("Shopping Bag");
-            StartCoroutine(MoveObjectOverTime(transform, bagPos.position, movementSpeed));
+            var itemPrice = ShoppingItems.items[transform.name];
+            if (itemPrice.GetType() == typeof(int)) {
+                price += itemPrice;    
+                if (price >= 1000) {
+                    levelFinished = true;
+                }
+                Transform bagPos = transform.parent.parent.Find("Shopping Bag");
+                StartCoroutine(MoveObjectOverTime(transform, bagPos.position, movementSpeed));
+            }
         }
     }
 
@@ -45,6 +57,12 @@ public class ShoppingItem : MonoBehaviour
         
         Debug.Log($"Done moving {moveMe.name}!");
         totalPrice.text = "$" + price.ToString();
+
+        if (price >= 1000) {
+            transform.parent.parent.Find("Final Score").gameObject.SetActive(true);
+            transform.parent.parent.Find("Final Score").GetComponent<TextMeshPro>().text = "You did it in " + timeElapsed.ToString() + "s";
+            Time.timeScale = 0;
+        } 
         isMoving = false;
     }
 }
