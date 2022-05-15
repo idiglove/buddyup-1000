@@ -10,16 +10,23 @@ public class CoasterController : MonoBehaviour
         {"Track 2", 0.03f},
         {"Track 3", -2.1f}
     };
-    //track1 y = 2.2
-    //track2 y = 0.03
-    //track2 y = -2.1
+
     public GameObject selectedObject;
     string selectedTrack;
     Vector3 offset;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(WaitUntilLevelFinished());
+    }
+
+    IEnumerator WaitUntilLevelFinished()
+    {
+        while (!RollerCoasterManager.levelFinished) {
+            yield return new WaitForSeconds(1f);
+            RollerCoasterManager.timeElapsed++;
+        }
     }
 
     // Update is called once per frame
