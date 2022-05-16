@@ -323,12 +323,17 @@ MonoBehaviour:
   sounds:
   - name: MainMenu
     clip: {fileID: 8300000, guid: 781946cde31e1b54f936d72ca1a520c9, type: 3}
-    volume: 0.521
+    volume: 0.322
     pitch: 1
     source: {fileID: 0}
   - name: MiniGame1
     clip: {fileID: 8300000, guid: e5ce999246a523c4bbe6218370f213c3, type: 3}
-    volume: 0.301
+    volume: 0.172
+    pitch: 1
+    source: {fileID: 0}
+  - name: CoinTouch
+    clip: {fileID: 8300000, guid: 5d8bad043017f8241be9e2564440c446, type: 3}
+    volume: 1
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &1001633090

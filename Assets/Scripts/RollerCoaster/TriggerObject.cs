@@ -6,9 +6,11 @@ public class TriggerObject : MonoBehaviour
 {
   bool isTriggered = false;
   TextMeshPro totalScore;
+  AudioManager am;
   void Start()
   {
     totalScore = GameObject.Find("Total Score").GetComponent<TextMeshPro>();
+    am = FindObjectOfType<AudioManager>();
   }
 
   // Update is called once per frame
@@ -26,6 +28,10 @@ public class TriggerObject : MonoBehaviour
 
       if (this.name == "Coin(Clone)")
       {
+        
+        if (am) {
+            am.Play("CoinTouch", false);
+        }
         RollerCoasterManager.totalScore += Random.Range(50, 250);
         totalScore.text = RollerCoasterManager.totalScore.ToString();
 

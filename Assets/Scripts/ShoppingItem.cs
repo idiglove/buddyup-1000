@@ -63,12 +63,18 @@ public class ShoppingItem : MonoBehaviour
         
         Debug.Log($"Done moving {moveMe.name}!");
         totalPrice.text = "$" + ShoppingItems.price.ToString();
-
+        
+        if (GameObject.Find("Shopping Bag")) {
+            GameObject.Find("Shopping Bag").SetActive(false);
+            transform.parent.parent.Find("Filled Up Bag").gameObject.SetActive(true);
+        }
+        
         if (ShoppingItems.price >= 1000) {
             transform.parent.parent.Find("Final Score").gameObject.SetActive(true);
             transform.parent.parent.Find("Final Score").GetComponent<TextMeshPro>().text = "You did it in " + ShoppingItems.timeElapsed.ToString() + "s";
             Time.timeScale = 0;
-        } 
+        }
         isMoving = false;
+        this.gameObject.SetActive(false);
     }
 }

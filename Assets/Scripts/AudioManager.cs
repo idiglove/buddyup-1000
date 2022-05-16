@@ -27,14 +27,14 @@ public class AudioManager : MonoBehaviour
             sound.source.volume = sound.volume;
             sound.source.pitch = sound.pitch;
             sound.source.playOnAwake = false;
-            sound.source.loop = true;
         }
     }
 
-    public void Play(string name)
+    public void Play(string name, bool loop = true)
     {
         Sound sound = soundsDictionary[name];
         sound.source.Play();
+        sound.source.loop = loop;
     }
 
     public void Stop(string name)
