@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class CoasterController : MonoBehaviour
 {
-    // private List<string> tracks = new List<string>{"Track 1", "Track 2", "Track 3"};
     IDictionary<string, float> tracks = new Dictionary<string, float> {
-        {"Track 1", 2.2f},
-        {"Track 2", 0.03f},
-        {"Track 3", -2.1f}
+        {"Track 1", 2.26f},
+        {"Track 2", -0.1f},
+        {"Track 3", -2.45f}
     };
 
     public GameObject selectedObject;
@@ -16,11 +15,12 @@ public class CoasterController : MonoBehaviour
     Vector3 offset;
 
     void Awake() {
+        Time.timeScale = 0;
         AudioManager am = FindObjectOfType<AudioManager>();
-        if (am.isPlaying("MainMenu")) {
+        if (am && am.isPlaying("MainMenu")) {
             am.Stop("MainMenu");
         }
-        if (!am.isPlaying("MiniGame1")) {
+        if (am && !am.isPlaying("MiniGame1")) {
             am.Play("MiniGame1");
         }
     }
@@ -57,15 +57,17 @@ public class CoasterController : MonoBehaviour
                 offset = selectedObject.transform.position - mousePosition;
                 selectedTrack = targetObject.name;
             }
+
+            if (targetObject && targetObject.name == "Tutorial") {
+                GameObject.Find("Tutorial").SetActive(false);
+                Time.timeScale = 1;
+            }
         }
         if (selectedObject)
         {
             // set object's position based on mouse position
-            // selectedObject.transform.position = mousePosition + offset;
-            // selectedObject.transform.parent.position = mousePosition + offset;
             Vector3 coaster = GameObject.Find("Coaster").transform.position;
             GameObject.Find("Coaster").transform.position = new Vector3(coaster.x, tracks[selectedTrack]);
-            
         }
     }
 }

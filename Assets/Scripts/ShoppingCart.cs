@@ -8,6 +8,9 @@ public class ShoppingCart : MonoBehaviour
     public GameObject selectedObject;
     public static bool isScanned = false;
     Vector3 offset;
+    void Awake() {
+        Time.timeScale = 0;
+    }
 
     void Start()
     {
@@ -22,7 +25,7 @@ public class ShoppingCart : MonoBehaviour
         {
             // on mouse click, set the selected object and get offset
             Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
-            if (targetObject && targetObject.transform.parent.name == "Shopping Items")
+            if (targetObject && targetObject.transform.parent && targetObject.transform.parent.name == "Shopping Items")
             {
                 selectedObject = targetObject.transform.gameObject;
                 offset = selectedObject.transform.position - mousePosition;
@@ -52,6 +55,11 @@ public class ShoppingCart : MonoBehaviour
             if (targetObject && targetObject.name == "Back") {
                 ShoppingItems.resetLevel();
                 SceneManager.LoadScene("MainMenu");
+            }
+
+            if (targetObject && targetObject.name == "Tutorial") {
+                GameObject.Find("Tutorial").SetActive(false);
+                Time.timeScale = 1;
             }
         }
     }
