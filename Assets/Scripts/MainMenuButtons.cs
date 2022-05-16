@@ -10,6 +10,13 @@ public class MainMenuButtons : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1; //unpause
+        AudioManager am = FindObjectOfType<AudioManager>();
+        if (am.isPlaying("MiniGame1")) {
+            am.Stop("MiniGame1");
+        }
+        if (!am.isPlaying("MainMenu")) {
+            am.Play("MainMenu");
+        }
     }
 
     // Update is called once per frame

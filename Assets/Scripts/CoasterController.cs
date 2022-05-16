@@ -15,6 +15,16 @@ public class CoasterController : MonoBehaviour
     string selectedTrack;
     Vector3 offset;
 
+    void Awake() {
+        AudioManager am = FindObjectOfType<AudioManager>();
+        if (am.isPlaying("MainMenu")) {
+            am.Stop("MainMenu");
+        }
+        if (!am.isPlaying("MiniGame1")) {
+            am.Play("MiniGame1");
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
